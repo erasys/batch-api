@@ -2,7 +2,7 @@
   "name": "batch-api",
   "description": "REST API proxy to bundle a batch of calls in one request",
   "version": "0.1.0alpha",
-  "author": "Florian Bischof <florian.bischof-code@erasys.de>"
+  "author": "Florian Bischof <florian.bischof-code@erasys.de>",
   "contributors": [
     "Carsten Schmittberger",
     "Jan Frederik Wigger"
