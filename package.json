@@ -1,28 +1,16 @@
 {
-  "name": "pr-batchApi",
-  "version": "0.1.0",
-  "description": "Batch Requests API",
-  "private": true,
-  "main": "./server.js",
+  "name": "batch-api",
+  "description": "REST API proxy to bundle a batch of calls in one request",
+  "version": "0.1.0alpha",
+  "author": "Florian Bischof <florian.bischof-code@erasys.de>"
+  "contributors": [
+    "Carsten Schmittberger",
+    "Jan Frederik Wigger"
+  ],
   "repository": {
     "type": "git",
-    "url": "http://git.bln.int.planetromeo.com/repos/planetromeo-source.github"
+    "url": "https://github.com/erasys/batch-api.git"
   },
-  "directories": {
-    "lib": ".",
-    "examples": "./examples"
-  },
-  "author": {
-    "name": "",
-    "email": "",
-    "url": "http://erasys.de/"
-  },
-  "contributors": [
-    {
-      "name": "",
-      "email": ""
-    }
-  ],
   "dependencies": {
     "async": "0.1.x",
     "dependency-foo": "0.1.x",
@@ -41,7 +29,11 @@
   "scripts": {
     "start": "node ./server"
   },
-  "engine": {
+  "directories": {
+    "lib": "./lib"
+  },
+  "main": "./server.js",
+  "engines": {
     "node": ">=0.8.8"
   }
 }
