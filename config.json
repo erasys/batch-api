@@ -1,0 +1,16 @@
+{
+  "apiServer": {
+    "url": "http://127.0.0.1",
+    "host": "localhost",
+    "port": 2018
+  },
+  "apiBatchServer": {
+    "url": "http://127.0.0.1",
+    "port": 2017
+  },
+  "logger": {
+    "console": { "colorize": true, "timestamp": true },
+    "file": { "filename": "/tmp/node-services.log", "timestamp": true }
+  },
+  "timeout": 30000
+}

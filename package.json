@@ -1,0 +1,47 @@
+{
+  "name": "pr-batchApi",
+  "version": "0.1.0",
+  "description": "Batch Requests API",
+  "private": true,
+  "main": "./server.js",
+  "repository": {
+    "type": "git",
+    "url": "http://git.bln.int.planetromeo.com/repos/planetromeo-source.github"
+  },
+  "directories": {
+    "lib": ".",
+    "examples": "./examples"
+  },
+  "author": {
+    "name": "",
+    "email": "",
+    "url": "http://erasys.de/"
+  },
+  "contributors": [
+    {
+      "name": "",
+      "email": ""
+    }
+  ],
+  "dependencies": {
+    "async": "0.1.x",
+    "dependency-foo": "0.1.x",
+    "express": "3.0.x",
+    "JSONPath": "0.9.x",
+    "request": "2.11.x",
+    "winston": "0.6.x"
+  },
+  "devDependencies": {
+    "express": "3.0.x",
+    "mocha": "1.6.x",
+    "omf": "0.0.x",
+    "qs": "0.5.x",
+    "request": "2.11.x"
+  },
+  "scripts": {
+    "start": "node ./server"
+  },
+  "engine": {
+    "node": ">=0.8.8"
+  }
+}
