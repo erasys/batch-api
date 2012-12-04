@@ -1,6 +1,6 @@
-# Batch API Proxy
+# Batch API
 
-API proxy to bundle a batch of calls in one request.
+REST API proxy to bundle a batch of calls in one request.
 
 The requested API calls may have dependencies on responses of earlier calls specified by a JSONPath expression and are processed in parallel, when possible, in sequence when necessary.
 
@@ -21,7 +21,7 @@ Install [Node 0.8.X](http://nodejs.org/#download) then get the source and instal
 ```console
 $ git clone https://github.com/erasys/batch-api
 $ cd batch-api
-\# npm install
+# npm install
 ```
 
 To start the [Express](http://expressjs.com) based server you just need edit host/url/port in `config.json` to match your setup (see "Configuration and Setup" section below) and `npm start`.
@@ -206,18 +206,26 @@ Note the JSONPath expression within the body of the API `getNewMessages` call.
 The parameter `sessionId` refers to a result of the `loginMyUser` API call which is unknown at the point of time the batch request is sent. 
 With JSONPath expressions you are able to use the JSON output of one request as a parameter for a dependent call:
 
-__{result=__`<request name>`:$.`<response item>`__}__
+```
+{result=<request name>:$.<response item>}
+```
 
-__Request name__ specifies the response of which API call we are using. __Response item__ is a name within the JSON response of this call.
+_Request name_ specifies the response of which API call we are using. _Response item_ is a name within the JSON response of this call.
 
 Feel free to use more complex [JSONPath](https://github.com/s3u/JSONPath) expressions like `{result=users:$.items[0].id}`.
 
 # Error handling
 
+## HTTP Errors
+
 If one of your requested operations returns a HTTP error this will be encapsulated in the JSON response object. 
 Dependent calls will have the reponse value `null`.
 
+## Timeouts
+
 Requests that timeout and their dependent requests also return the response value `null`.
+
+## Non-matching JSONPath
 
 The same will happen if you use a JSONPath expression that has no match.
 
