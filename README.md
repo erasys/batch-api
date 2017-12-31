@@ -236,7 +236,7 @@ The same will happen if you use a JSONPath expression that has no match.
 * [dependency-foo](https://github.com/firebaseco/dependency-foo) – Serializable General Purpose Dependency Graph
 * [Express](http://expressjs.com) – Router, view rentering, configruation
 * [JSONPath](https://github.com/s3u/JSONPath) – A JS implementation of JSONPath
-* [mocha](http://visionmedia.github.com/mocha/) – simple, flexible, fun test framework
+* [mocha](http://mochajs.org/) – simple, flexible, fun test framework
 * [omf](https://github.com/brianc/node-omf) – ORANGE MOCHA FRAPPUCCINO
 * [qs](https://github.com/visionmedia/node-querystring) – querystring parser
 * [request](https://github.com/mikeal/request) – Simplified HTTP request client
